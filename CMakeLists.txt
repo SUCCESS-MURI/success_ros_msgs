@@ -10,6 +10,7 @@ project(success_ros_msgs)
 find_package(catkin REQUIRED COMPONENTS
   std_msgs
   actionlib_msgs
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -49,6 +50,8 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   Speech.msg
+  Marker.msg
+  DetectedMarkers.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -69,6 +72,7 @@ generate_messages(
   DEPENDENCIES
   std_msgs
   actionlib_msgs
+  geometry_msgs
 )
 
 ################################################
